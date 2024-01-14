@@ -1,0 +1,63 @@
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "antd": "^5.3.1",
+    "axios": "^1.4.0",
+    "cra-template-typescript": "1.2.0",
+    "docx": "^7.8.2",
+    "file-saver": "^2.0.5",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-highlighter": "^0.4.3",
+    "react-hook-form": "^7.44.2",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "react-window": "^1.8.9",
+    "typescript": "^5.0.2",
+    "uuid": "^9.0.0",
+    "validator": "^13.9.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/file-saver": "^2.0.5",
+    "@types/mark.js": "^8.11.8",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-window": "^1.8.5",
+    "@types/uuid": "^9.0.2",
+    "@types/validator": "^13.7.17",
+    "mark.js": "^8.11.1",
+    "web-vitals": "^3.3.0"
+  }
+}

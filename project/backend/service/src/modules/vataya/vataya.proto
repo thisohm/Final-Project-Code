@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option go_package = "service/";
+
+// this will be package of the generated code
+package service;
+
+enum Sampling {
+	NB = 0; // 8k
+	WB = 1; // 16k
+}
+
+enum TextTransform {
+	Transform = 0; // general text tranform
+	LineSegment = 1; // line segment and text tranform
+	None = 3; // disable
+}
+
+// Message structure
+message ClientInfo {
+	// Field number 1-15 use 1 byte, while field 16th - 2047th use 2 bytes
+	// So, the first 15 fields should be reserved for fields that are used oftenly
+	string apikey = 1;
+	string clientid = 2;
+	Sampling sampling = 3;
+	TextTransform texttransform = 4;
+	bool singleutt = 5;
+	bool disablevad = 6;
+	bool wordresult = 7;
+}
+
+/*
+message RouteInfo {
+	int32 status = 1;
+	string host = 2;
+	int32 port = 3;
+}
+*/
+
+message ConnectInfo {
+	int32 status = 1;
+}
+
+message AudioData {
+	//repeated string data = 1;
+	string content = 1;
+	bool vad = 2;
+}
+
+message RecogData {
+	string transcription = 1;
+}
+
+service VatayaService {
+	rpc Connect(ClientInfo) returns(ConnectInfo);
+	rpc Recognize(stream AudioData) returns(stream RecogData);
+}
+

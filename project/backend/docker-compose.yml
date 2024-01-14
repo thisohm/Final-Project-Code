@@ -1,0 +1,73 @@
+version: '3.5'
+services:
+# MariaDB
+  ohmohm-maria:
+    image: mariadb:${MYSQL_TAG}
+    container_name: ohmohm-maria
+    hostname: ohmohm-maria
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./dbs/mariadb:/var/lib/mysql
+      #- ./50-server.cnf:/etc/mysql/mariadb.conf.d/50-server.cnf
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    networks:
+      - ohmohm-nk
+  ohmohm-pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: ohmohm-pma
+    hostname: ohmohm-pma
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 13003:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=ohmohm-maria
+      #- PMA_ABSOLUTE_URI=https://www.ai9.co.th/pma/
+    restart: always
+    links:
+      - ohmohm-maria
+    networks:
+      - ohmohm-nk
+  ohmohm-backend:
+    build: ./backend
+    image: ohmohm-backend
+    container_name: ohmohm-backend
+    hostname: ohmohm-backend
+    ports:
+      - 13001:3000
+      - 13002:13002
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./backend:/api
+      - ./repository/uploads:/api/uploads
+      - ./repository/library:/api/library
+    restart: always
+    stdin_open: true
+    networks:
+      - ohmohm-nk    
+  ohmohm-service:
+    build: ./service
+    image: ohmohm-service
+    container_name: ohmohm-service
+    hostname: ohmohm-service
+    # ports:
+    #   - 127.0.0.1:xxxxx:8080
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./service:/app
+      - ./repository/uploads:/app/uploads
+      - ./repository/library:/app/library
+    restart: always
+    stdin_open: true
+    depends_on:
+      - ohmohm-backend
+    networks:
+      - ohmohm-nk
+
+networks:
+  ohmohm-nk:
+    external:
+      name: ohmohm-nk

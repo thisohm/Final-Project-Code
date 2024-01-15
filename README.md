@@ -88,6 +88,7 @@ Finally, open source code in VSCode to install dependencies and run the local se
   - **And run :** </br>
     ```bash
     npm install
+    
     npm start
     ```
 

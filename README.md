@@ -83,7 +83,7 @@ when create container is finished, following this steps to run backend server an
 
 ### Setup - Frontend
 Finally, open source code in VSCode to install dependencies and run the local server, following this steps
-  - **Open folder > select "project" folder**
+  - **Open folder > select "project" folder > select folder**
   - **Select "frontend" folder > right click "package.json" file > select "Open in integrated Terminal"**
   - **And run :** </br>
     ```bash

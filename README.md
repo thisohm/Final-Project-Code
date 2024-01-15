@@ -20,6 +20,8 @@
 - **Export text as Docx or Txt file**
 
 ## Getting Started
+
+### Setup - Docker
 First, you need to install and setup Docker Desktop. </br>
 - **Open PowerShell as Administrator and run :** </br>
 ```bash
@@ -55,4 +57,28 @@ When install is finished , following this steps
   - **Settings > Resources > WSL Integration**
   - **Tick the "Enable integration with my default WSL distro" and choose distributions to Ubuntu**
   - **Press apply and restart**
+    
+### Setup - Backend
+Create a container for backend, following this steps
+  - **Dev Environments > Create > Get Started**
+  - **Choose source and select local directory** </br>
+    ```bash
+    ..\project\backend
+    ```
+  - **Press continue and finish**
+
+when create container is finished, following this steps to run backend server and service
+  - **Container > backend > ohmohm-backend (run backend)**
+  - **Click terminal and run :** </br>
+    ```bash
+    npm run dev
+    ```
+  - **Container > backend > ohmohm-service (run service)**
+  - **Click terminal and run :** </br>
+    ```bash
+    python setup.py
+    ```
+
+### Setup - Frontend
+
 

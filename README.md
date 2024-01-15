@@ -49,7 +49,7 @@ wsl --set-default-version 2
 When the download is complete, press Launch and you will be taken to the cmd page of Ubuntu. Complete the creation of User and Password.
 
 - **Download Docker Desktop**
-[Download](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=US](https://docs.docker.com/desktop/install/windows-install/)https://docs.docker.com/desktop/install/windows-install/)</br>
+[Download](https://docs.docker.com/desktop/install/windows-install/)</br>
 When install is finished , following this steps
   - **Settings > General**
   - **Tick the box "Use the WSL 2 based engine"**

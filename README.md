@@ -70,7 +70,9 @@ Create a container for backend, following this steps
   
     ```bash
     cd ..\Final-Project-Code-main\project\backend
+    ```
 
+    ```bash
     docker compose up
     ```
 

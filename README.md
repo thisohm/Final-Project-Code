@@ -66,14 +66,13 @@ When install is finished , following this steps
     
 ### Setup - Backend
 Create a container for backend, following this steps
-  - **Dev Environments > Create > Get Started**
-  - **Choose source and select local directory** </br>
+  - **Open Command Prompt** </br>
   
     ```bash
-    ..\project\backend
+    cd ..\Final-Project-Code-main\project\backend
+
+    docker compose up
     ```
-    
-  - **Press continue and finish**
 
 when create container is finished, following this steps to run backend server and service
   - **Container > backend > ohmohm-backend (run backend)**

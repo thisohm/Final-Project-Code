@@ -79,7 +79,11 @@ Create a container for backend, following this steps
 when create container is finished, following this steps to run backend server and service
   - **Container > backend > ohmohm-backend (run backend)**
   - **Click terminal and run :** </br>
-  
+
+    ```bash
+    npm install -g nodemon
+    ```
+    
     ```bash
     npm run dev
     ```

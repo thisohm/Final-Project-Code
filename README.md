@@ -26,11 +26,13 @@ Firstly, you need to download source code from this repository to local, and fol
 ### Setup - Docker
 Secondly, you need to install and setup Docker Desktop. </br>
 - **Open PowerShell as Administrator and run :** </br>
+
 ```bash
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
+
 and then restart your computer
 
 - **Download and install Linux kernel update package**
@@ -53,9 +55,11 @@ When install is finished , following this steps
   - **Tick the box "Use the WSL 2 based engine"**
   - **Press apply and restart**
   - **Open PowerShell as Administrator and run :** </br>
+  
     ```bash
     wsl --set-version ubuntu 2
     ```
+    
   - **Settings > Resources > WSL Integration**
   - **Tick the "Enable integration with my default WSL distro" and choose distributions to Ubuntu**
   - **Press apply and restart**
@@ -64,19 +68,24 @@ When install is finished , following this steps
 Create a container for backend, following this steps
   - **Dev Environments > Create > Get Started**
   - **Choose source and select local directory** </br>
+  
     ```bash
     ..\project\backend
     ```
+    
   - **Press continue and finish**
 
 when create container is finished, following this steps to run backend server and service
   - **Container > backend > ohmohm-backend (run backend)**
   - **Click terminal and run :** </br>
+  
     ```bash
     npm run dev
     ```
+    
   - **Container > backend > ohmohm-service (run service)**
   - **Click terminal and run :** </br>
+  
     ```bash
     python setup.py
     ```
@@ -86,6 +95,7 @@ Finally, open source code in VSCode to install dependencies and run the local se
   - **Open folder > select "project" folder > select folder**
   - **Select "frontend" folder > right click "package.json" file > select "Open in integrated Terminal"**
   - **And run :** </br>
+  
     ```bash
     npm install
     

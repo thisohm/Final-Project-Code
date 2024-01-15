@@ -20,3 +20,39 @@
 - **Export text as Docx or Txt file**
 
 ## Getting Started
+First, you need to install and setup Docker Desktop. </br>
+- **Open PowerShell as Administrator and run :** </br>
+```bash
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+and then restart your computer
+
+- **Download and install Linux kernel update package**
+[Download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+- **Open PowerShell as Administrator and run :** </br>
+
+```bash
+wsl --set-default-version 2
+```
+
+- **Download Ubuntu from Microsoft Store**
+[Download](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=US)</br>
+When the download is complete, press Launch and you will be taken to the cmd page of Ubuntu. Complete the creation of User and Password.
+
+- **Download Docker Desktop**
+[Download](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=US](https://docs.docker.com/desktop/install/windows-install/)https://docs.docker.com/desktop/install/windows-install/)</br>
+When install is finished , following this steps
+  - **Settings > General**
+  - **Tick the box "Use the WSL 2 based engine"**
+  - **Press apply and restart**
+  - **Open PowerShell as Administrator and run :** </br>
+    ```bash
+    wsl --set-version ubuntu 2
+    ```
+  - **Settings > Resources > WSL Integration**
+  - **Tick the "Enable integration with my default WSL distro" and choose distributions to Ubuntu**
+  - **Press apply and restart**
+

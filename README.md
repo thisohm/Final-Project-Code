@@ -8,7 +8,7 @@
 **React, TypeScript, Ant Design, Node.js, Express.js, MariaDB**
 
 ## Tools
-- **Visual Studio Code** [Download](https://code.visualstudio.com/)
+- **Visual Studio Code (VSCode)** [Download](https://code.visualstudio.com/)
 - **Docker Desktop** [Download](https://www.docker.com/products/docker-desktop/)
 
 ## Features
@@ -21,8 +21,10 @@
 
 ## Getting Started
 
+Firstly, you need to download source code from this repository to local, and following steps to setup this project.
+
 ### Setup - Docker
-First, you need to install and setup Docker Desktop. </br>
+Secondly, you need to install and setup Docker Desktop. </br>
 - **Open PowerShell as Administrator and run :** </br>
 ```bash
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -80,5 +82,13 @@ when create container is finished, following this steps to run backend server an
     ```
 
 ### Setup - Frontend
+Finally, open source code in VSCode to install dependencies and run the local server, following this steps
+  - **Open folder > select "project" folder**
+  - **Select "frontend" folder > right click "package.json" file > select "Open in integrated Terminal"**
+  - **And run :** </br>
+    ```bash
+    npm install
+    npm start
+    ```
 
 

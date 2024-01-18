@@ -1,6 +1,6 @@
 # Transcribe and prepare a draft meeting minutes web application (Final Project)
 - **CRUD**
-- **RESTful APIs**
+- **REST API**
 - **Call VATAYA service API from NECTEC (Transcribe)**
 
 

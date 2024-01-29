@@ -5,7 +5,7 @@
 
 
 ## Tech stack 
-**React, TypeScript, Ant Design, Node.js, Express.js, MariaDB**
+**React, TypeScript, Ant Design, Node.js, Express.js, MySQL**
 
 ## Tools
 - **Visual Studio Code (VSCode)** [Download](https://code.visualstudio.com/)
